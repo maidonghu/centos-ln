@@ -12,8 +12,14 @@ sudo systemctl enable php-fpm
 sudo systemctl restart php-fpm
 
 sudo touch /etc/yum.repos.d/nginx.repo
-echo "[nginx]
+echo '[nginx]
 name=nginx repo
 baseurl=http://nginx.org/packages/mainline/centos/7/$basearch/
 gpgcheck=0
-enabled=1" | sudo tee /etc/yum.repos.d/nginx.repo
+enabled=1' | sudo tee /etc/yum.repos.d/nginx.repo
+sudo yum install nginx -y
+
+sudo systemctl disable httpd
+sudo systemctl stop httpd
+sudo systemctl enable nginx
+sudo systemctl start nginx
