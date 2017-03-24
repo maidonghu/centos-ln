@@ -38,7 +38,8 @@ sudo cp -rp wordpress/* html/
 chmod 777 html html/wp-content
 
 sudo tuned-adm profile throughput-performance
-get nginx config files
+sudo wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/maidonghu/centos-ln/master/nginx.conf
+sudo wget -O /etc/nginx/conf.d/http.conf https://raw.githubusercontent.com/maidonghu/centos-ln/master/http.conf
 
 cd /var/www/html/wp-content/plugins/
 sudo wget https://downloads.wordpress.org/plugin/wp-sitemanager.1.2.3.zip
