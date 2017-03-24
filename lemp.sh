@@ -23,3 +23,10 @@ sudo systemctl disable httpd
 sudo systemctl stop httpd
 sudo systemctl enable nginx
 sudo systemctl start nginx
+
+sudo mysql -sfu root < "mysql_secure_installation.sql"
+sudo mysql -sfu root < "wordpress.sql"
+rm -f mysql_secure_installation.sql
+rm -f wordpress.sql
+sudo systemctl restart mariadb
+
