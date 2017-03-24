@@ -35,7 +35,7 @@ cd /var/www/
 sudo wget https://wordpress.org/latest.zip
 sudo unzip latest.zip
 sudo cp -rp wordpress/* html/
-chmod 777 html html/wp-content
+sudo chmod 777 html html/wp-content
 
 sudo tuned-adm profile throughput-performance
 sudo wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/maidonghu/centos-ln/master/nginx.conf
