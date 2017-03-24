@@ -21,3 +21,11 @@ systemctl start ntpd
 
 sed -i 's/#Port 22/Port 50009/' /etc/ssh/sshd_config
 systemctl restart sshd
+
+sudo systemctl enable firewalld
+sudo systemctl start firewalld
+sudo firewall-cmd --zone=public --add-port=50009/tcp --permanent
+sudo firewall-cmd --zone=public --add-service=http --permanent
+sudo firewall-cmd --zone=public --add-service=https --permanent
+sudo firewall-cmd --reload
+
