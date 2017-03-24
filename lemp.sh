@@ -28,7 +28,7 @@ sudo mysql -sfu root < "mysql_secure_installation.sql"
 sudo mysql -sfu root < "wordpress.sql"
 rm -f mysql_secure_installation.sql
 rm -f wordpress.sql
-get /etc/my.cnf.d/server.cnf
+sudo wget -O /etc/my.cnf.d/server.cnf wget https://raw.githubusercontent.com/maidonghu/centos-ln/master/server.cnf
 sudo systemctl restart mariadb
 
 cd /var/www/
