@@ -28,5 +28,12 @@ sudo mysql -sfu root < "mysql_secure_installation.sql"
 sudo mysql -sfu root < "wordpress.sql"
 rm -f mysql_secure_installation.sql
 rm -f wordpress.sql
+get /etc/my.cnf.d/server.cnf
 sudo systemctl restart mariadb
+
+cd /var/www/
+sudo wget https://wordpress.org/latest.zip
+sudo unzip latest.zip
+sudo cp -rp wordpress/* html/
+chmod 777 html html/wp-content
 
