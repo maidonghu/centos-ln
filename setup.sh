@@ -15,3 +15,9 @@ chown mike:mike /home/mike -R
 
 yum update -y
 timedatectl set-timezone America/Vancouver
+yum install ntp -y
+systemctl enable ntpd
+systemctl start ntpd
+
+sed -i 's/#Port 22/Port 50009/' /etc/ssh/sshd_config
+systemctl restart sshd
