@@ -37,3 +37,12 @@ sudo unzip latest.zip
 sudo cp -rp wordpress/* html/
 chmod 777 html html/wp-content
 
+sudo tuned-adm profile throughput-performance
+get nginx config files
+
+cd /var/www/html/wp-content/plugins/
+sudo wget https://downloads.wordpress.org/plugin/wp-sitemanager.1.2.3.zip
+sudo unzip wp-sitemanager.1.2.3.zip
+get wp-config.php
+
+sudo systemctl restart nginx
