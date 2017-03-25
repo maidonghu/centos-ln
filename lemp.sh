@@ -5,11 +5,8 @@ sudo yum install  mariadb-server -y
 sudo systemctl enable mariadb
 sudo systemctl start mariadb
 sudo mv /root/mysql_secure_installation.sql ./
-sudo mv /root/wordpress.sql  ./
 sudo mysql -sfu root < "mysql_secure_installation.sql"
-sudo mysql -sfu root < "wordpress.sql"
 rm -f mysql_secure_installation.sql
-rm -f wordpress.sql
 sudo wget -O /etc/my.cnf.d/server.cnf wget https://raw.githubusercontent.com/maidonghu/centos-ln/master/server.cnf
 sudo systemctl restart mariadb
 
