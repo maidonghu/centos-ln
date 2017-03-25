@@ -42,6 +42,10 @@ sudo wget -O /etc/nginx/conf.d/http.conf https://raw.githubusercontent.com/maido
 cd /var/www/html/wp-content/plugins/
 sudo wget https://downloads.wordpress.org/plugin/wp-sitemanager.1.2.3.zip
 sudo unzip wp-sitemanager.1.2.3.zip
-/** sudo wget -O /var/www/html/wp-config.php https://raw.githubusercontent.com/maidonghu/centos-ln/master/wp-config.php  */
+sudo mv /wp-config.php /var/www/html/
+sudo mkdir -p /etc/nginx/ssl/
+sudo mkdir -p /etc/nginx/ssl/linode.mikecloud.info
+sudo mv /fullchain1.pem /etc/nginx/ssl/linode.mikecloud.info/
+sudo mv /privkey1.pem /etc/nginx/ssl/linode.mikecloud.info/
 
 sudo systemctl restart nginx
