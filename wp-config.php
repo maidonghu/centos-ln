@@ -79,6 +79,7 @@ $table_prefix  = 'wp_';
  */
 define('WP_DEBUG', false);
 define('WP_CACHE', true);
+define('FORCE_SSL_ADMIN', true);
 define('FS_METHOD','direct');
 
 /* That's all, stop editing! Happy blogging. */
