@@ -7,7 +7,7 @@ sudo systemctl start mariadb
 
 sudo yum install epel-release -y
 sudo rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
-sudo yum --enablerepo=remi,remi-php70 install php php-mysqlnd php-gd php-xml php-xmlrpc php-mbstring php-mcrypt php-fpm php-opcache php-apcu -y
+sudo yum --enablerepo=remi,remi-php71 install php php-mysqlnd php-gd php-xml php-xmlrpc php-mbstring php-mcrypt php-fpm php-opcache php-apcu -y
 sudo systemctl enable php-fpm
 sudo systemctl restart php-fpm
 
