@@ -34,7 +34,6 @@ sudo wget https://wordpress.org/latest.zip
 sudo unzip latest.zip
 sudo cp -rp wordpress/* html/
 sudo chmod 777 html html/wp-content
-sudo chown -R apache:apache /var/www/html/wp-content
 
 sudo tuned-adm profile throughput-performance
 sudo wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/maidonghu/centos-ln/master/nginx.conf
@@ -49,4 +48,5 @@ sudo mkdir -p /etc/nginx/ssl/linode.mikecloud.info
 sudo mv /fullchain1.pem /etc/nginx/ssl/linode.mikecloud.info/
 sudo mv /privkey1.pem /etc/nginx/ssl/linode.mikecloud.info/
 
+sudo chown -R apache:apache /var/www/html/wp-content
 sudo systemctl restart nginx
