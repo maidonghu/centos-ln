@@ -23,6 +23,10 @@ sed -i 's/PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_c
 sed -i 's/PermitRootLogin yes/PermitRootLogin no/' /etc/ssh/sshd_config
 systemctl restart sshd
 
+yum install sendmail
+systemctl enable sendmail
+systemctl start sendmail
+
 systemctl enable firewalld
 systemctl start firewalld
 firewall-cmd --zone=public --add-port=50009/tcp --permanent
