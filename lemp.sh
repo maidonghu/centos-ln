@@ -34,14 +34,15 @@ sudo wget https://wordpress.org/latest.zip
 sudo unzip latest.zip
 sudo cp -rp wordpress/* html/
 sudo chmod 777 html html/wp-content
+sudo chown -R apache:apache /var/www/html/wp-content
 
 sudo tuned-adm profile throughput-performance
 sudo wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/maidonghu/centos-ln/master/nginx.conf
 sudo wget -O /etc/nginx/conf.d/http.conf https://raw.githubusercontent.com/maidonghu/centos-ln/master/http.conf
 
 cd /var/www/html/wp-content/plugins/
-sudo wget https://downloads.wordpress.org/plugin/wp-sitemanager.1.2.3.zip
-sudo unzip wp-sitemanager.1.2.3.zip
+sudo wget https://downloads.wordpress.org/plugin/updraftplus.1.12.35.zip
+sudo unzip updraftplus.1.12.35.zip
 sudo mv /wp-config.php /var/www/html/
 sudo mkdir -p /etc/nginx/ssl/
 sudo mkdir -p /etc/nginx/ssl/linode.mikecloud.info
