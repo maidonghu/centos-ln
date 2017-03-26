@@ -1,10 +1,10 @@
 #!/bin/bash
-read -s -p "Enter Root Password: "  pswd
-echo -e "$pswd\n$pswd" | passwd
+#read -s -p "Enter Root Password: "  pswd
+#echo -e "$pswd\n$pswd" | passwd
 adduser mike
-read -s -p "Enter mike's new Password: "  pswd
-echo -e "$pswd\n$pswd" | passwd mike
-unset pswd
+#read -s -p "Enter mike's new Password: "  pswd
+#echo -e "$pswd\n$pswd" | passwd mike
+#unset pswd
 gpasswd -a mike wheel
 
 mkdir /home/mike/.ssh
