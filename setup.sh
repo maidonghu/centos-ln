@@ -23,7 +23,7 @@ sed -i 's/PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_c
 sed -i 's/PermitRootLogin yes/PermitRootLogin no/' /etc/ssh/sshd_config
 systemctl restart sshd
 
-yum install sendmail
+yum install sendmail -y
 systemctl enable sendmail
 systemctl start sendmail
 
