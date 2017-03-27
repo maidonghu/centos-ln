@@ -9,7 +9,7 @@ gpasswd -a mike wheel
 
 mkdir /home/mike/.ssh
 yum install wget unzip -y
-cat ./authorized_keys >> /home/mike/.ssh/authorized_keys
+cat /authorized_keys >> /home/mike/.ssh/authorized_keys
 chown mike:mike /home/mike -R
 
 yum update -y
