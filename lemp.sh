@@ -11,10 +11,16 @@ sudo wget -O /etc/my.cnf.d/server.cnf https://raw.githubusercontent.com/maidongh
 sudo systemctl restart mariadb
 
 sudo yum install epel-release -y
+sudo yum install -y redis
+sudo systemctl enable redis
+sudo mv /redis.conf /etc/
+sudo systemctl restart redis
+
 wget http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 sudo rpm -ivh remi-release-7.rpm
-sudo yum --enablerepo=remi,remi-php71 install php php-mysqlnd php-gd php-xml php-xmlrpc php-mbstring php-mcrypt php-fpm php-opcache php-apcu -y
+sudo yum --enablerepo=remi,remi-php71 install php php-mysqlnd php-gd php-xml php-redis php-xmlrpc php-mbstring php-mcrypt php-fpm php-opcache php-apcu -y
 sudo systemctl enable php-fpm
+sudo mv /www.conf /etc/php-fpm.d/
 sudo systemctl restart php-fpm
 
 sudo touch /etc/yum.repos.d/nginx.repo
