@@ -48,7 +48,7 @@ sudo wget -O /etc/nginx/conf.d/http.conf https://raw.githubusercontent.com/maido
 
 cd /var/www/html/wp-content/plugins/
 sudo wget https://downloads.wordpress.org/plugin/updraftplus.1.12.35.zip
-sudo unzip updraftplus.1.12.35.zip
+sudo unzip updraftplus.1.12.36.zip
 sudo mv /wp-config.php /var/www/html/
 sudo mkdir -p /etc/nginx/ssl/
 sudo mkdir -p /etc/nginx/ssl/linode.mikecloud.info
