@@ -10,8 +10,9 @@
 
 # this is only for the mysqld standalone daemon
 [mysqld]
-innodb_buffer_pool_size = 512M
-query_cache_size = 64M
+#innodb_buffer_pool_size = 512M
+query_cache_type = 1
+query_cache_size = 10M
 
 # this is only for embedded server
 [embedded]
