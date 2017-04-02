@@ -10,7 +10,7 @@ baseurl = http://yum.mariadb.org/10.1/centos7-amd64
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1' | sudo tee /etc/yum.repos.d/MariaDB.repo
 
-sudo yum install MariaDB-server MariaDB-client
+sudo yum install -y MariaDB-server MariaDB-client
 sudo systemctl enable mariadb
 sudo systemctl start mariadb
 sudo mv /mysql_secure_installation.sql ./
