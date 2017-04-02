@@ -22,6 +22,7 @@ sudo systemctl restart mariadb
 sudo yum install epel-release -y
 sudo yum install -y redis
 sudo systemctl enable redis
+sudo mkdir -p /var/run/redis
 sudo mv /redis.conf /etc/
 sudo systemctl restart redis
 
