@@ -24,6 +24,7 @@ sudo yum install -y redis
 sudo systemctl enable redis
 sudo mkdir -p /var/run/redis
 sudo mv /redis.conf /etc/
+echo 'vm.overcommit_memory = 1' |
 sudo systemctl restart redis
 
 wget http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
