@@ -12,8 +12,9 @@
 [mysqld]
 #innodb_buffer_pool_size = 512M
 innodb_buffer_pool_instances = 1
+innodb_log_file_size = 16M
 query_cache_type = 1
-query_cache_size = 20M
+query_cache_size = 10M
 
 # this is only for embedded server
 [embedded]
