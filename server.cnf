@@ -15,9 +15,8 @@ innodb_buffer_pool_instances = 1
 innodb_log_file_size = 16M
 #performance_schema = on
 thread_cache_size = 4
-query_cache_type = 1
-query_cache_limit = 1M
-query_cache_size = 10M
+query_cache_type = 0
+query_cache_size = 0
 
 # this is only for embedded server
 [embedded]
