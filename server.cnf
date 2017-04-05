@@ -11,7 +11,7 @@
 # this is only for the mysqld standalone daemon
 [mysqld]
 #innodb_buffer_pool_size = 512M
-Innodb_buffer_pool_instances = 1
+innodb_buffer_pool_instances = 1
 query_cache_type = 1
 query_cache_size = 20M
 
