@@ -39,6 +39,8 @@ firewall-cmd --reload
 
 echo never > /sys/kernel/mm/transparent_hugepage/enabled
 echo 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' | tee -a /etc/rc.local
+chmod +x /etc/rc.local
+chmod +x /etc/rc.d/rc.local
 
 echo 'Please logoff and login again with SSH with mike!' 
 sleep 5
