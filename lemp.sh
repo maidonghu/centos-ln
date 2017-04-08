@@ -22,8 +22,8 @@ sudo systemctl restart mariadb
 sudo yum install epel-release -y
 wget http://mirrors.mediatemple.net/remi/enterprise/remi-release-7.rpm
 sudo rpm -ivh remi-release-7.rpm
-sudo yum --enablerepo=remi install redis
-sudo yum install -y redis
+sudo yum --enablerepo=remi install redis -y
+#sudo yum install -y redis
 sudo systemctl enable redis
 sudo mkdir -p /var/run/redis
 sudo mv /redis.conf /etc/
