@@ -20,10 +20,7 @@ sudo wget -O /etc/my.cnf.d/server.cnf https://raw.githubusercontent.com/maidongh
 sudo systemctl restart mariadb
 
 sudo yum install epel-release -y
-wget http://mirrors.mediatemple.net/remi/enterprise/remi-release-7.rpm
-sudo rpm -ivh remi-release-7.rpm
-sudo yum --enablerepo=remi install redis -y
-#sudo yum install -y redis
+sudo yum install -y redis
 sudo systemctl enable redis
 sudo mkdir -p /var/run/redis
 sudo mv /redis.conf /etc/
@@ -31,8 +28,8 @@ echo 'vm.overcommit_memory = 1' | sudo tee -a /etc/sysctl.conf
 sysctl vm.overcommit_memory=1
 sudo systemctl restart redis
 
-#wget http://mirrors.mediatemple.net/remi/enterprise/remi-release-7.rpm
-#sudo rpm -ivh remi-release-7.rpm
+wget http://mirrors.mediatemple.net/remi/enterprise/remi-release-7.rpm
+sudo rpm -ivh remi-release-7.rpm
 sudo yum --enablerepo=remi,remi-php71 install php php-mysqlnd php-gd php-xml php-redis php-xmlrpc php-mbstring php-mcrypt php-fpm php-opcache php-apcu -y
 sudo systemctl enable php-fpm
 sudo mv /www.conf /etc/php-fpm.d/
