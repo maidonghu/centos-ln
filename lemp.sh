@@ -71,7 +71,7 @@ sudo mv /fullchain1.pem /etc/nginx/ssl/blog.mikecloud.info/
 sudo mv /privkey1.pem /etc/nginx/ssl/blog.mikecloud.info/
 sudo mkdir  -p /etc/nginx/ssl/blog.mikecloud.info_ecc
 sudo mv /fullchain.cer /etc/nginx/ssl/blog.mikecloud.info_ecc/
-sudo mv /blog.mikeclouf.info.key /etc/nginx/ssl/blog.mikecloud.info_ecc/
+sudo mv /blog.mikecloud.info.key /etc/nginx/ssl/blog.mikecloud.info_ecc/
 
 sudo chown -R apache:apache /var/www/html/wp-content
 sudo systemctl restart nginx
