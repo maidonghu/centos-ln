@@ -51,7 +51,7 @@ sudo rpm -ivh https://raw.githubusercontent.com/maidonghu/centos-ln/master/nginx
 #sudo yum install nginx-more -y
 #cd /etc/yum.repos.d
 #sudo wget https://repo.codeit.guru/codeit.mainline.el`rpm -q --qf "%{VERSION}" $(rpm -q --whatprovides redhat-release)`.repo
-sudo yum install nginx -y
+#sudo yum install nginx -y
 
 sudo systemctl disable httpd
 sudo systemctl stop httpd
