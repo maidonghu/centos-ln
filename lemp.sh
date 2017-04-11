@@ -49,7 +49,7 @@ sudo systemctl restart php-fpm
 
 #sudo yum install https://repo.aerisnetwork.com/stable/centos/7/x86_64/aeris-release-1.0-4.el7.noarch.rpm -y
 #sudo yum install nginx-more -y
-sudo cd /etc/yum.repos.d
+cd /etc/yum.repos.d
 sudo wget https://repo.codeit.guru/codeit.mainline.el`rpm -q --qf "%{VERSION}" $(rpm -q --whatprovides redhat-release)`.repo
 sudo yum install nginx -y
 
