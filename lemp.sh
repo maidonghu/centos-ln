@@ -47,8 +47,11 @@ sudo systemctl restart php-fpm
 #sudo yum install nginx -y
 #sudo rpm -ivh https://raw.githubusercontent.com/maidonghu/centos-ln/master/nginx-1.11.13-1.el7.centos.ngx.x86_64.rpm
 
-sudo yum install https://repo.aerisnetwork.com/stable/centos/7/x86_64/aeris-release-1.0-4.el7.noarch.rpm -y
-sudo yum install nginx-more -y
+#sudo yum install https://repo.aerisnetwork.com/stable/centos/7/x86_64/aeris-release-1.0-4.el7.noarch.rpm -y
+#sudo yum install nginx-more -y
+sudo cd /etc/yum.repos.d
+sudo wget https://repo.codeit.guru/codeit.mainline.el`rpm -q --qf "%{VERSION}" $(rpm -q --whatprovides redhat-release)`.repo
+sudo yum install nginx -y
 
 sudo systemctl disable httpd
 sudo systemctl stop httpd
