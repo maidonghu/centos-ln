@@ -28,7 +28,7 @@ sudo mkdir -p /var/run/redis
 sudo chmod 777 -R /var/run/redis
 sudo mv /redis.conf /etc/
 echo 'vm.overcommit_memory = 1' | sudo tee -a /etc/sysctl.conf
-sysctl vm.overcommit_memory=1
+sudo sysctl vm.overcommit_memory=1
 sudo systemctl restart redis
 
 #wget http://mirrors.mediatemple.net/remi/enterprise/remi-release-7.rpm
