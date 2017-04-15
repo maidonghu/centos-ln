@@ -19,7 +19,7 @@ sed -i '/%setup -q/a tar zxf %{SOURCE100}' /root/rpmbuild/SPECS/nginx.spec
 sed -i '/.*Requires: openssl.*/d' /root/rpmbuild/SPECS/nginx.spec
 sed -i '/BuildRequires: pcre-devel/a BuildRequires: jemalloc-devel' /root/rpmbuild/SPECS/nginx.spec
 # hardening whatnots since 1.11.9
-sed -i 's|%define WITH_LD_OPT .*|%define WITH_LD_OPT ""|g' /root/rpmbuild/SPECS/nginx.spec
+sed -i 's|%define WITH_LD_OPT .*|%define WITH_LD_OPT "-ljemalloc"|g' /root/rpmbuild/SPECS/nginx.spec
 sed -i 's| -fPIC||g' /root/rpmbuild/SPECS/nginx.spec
 
 spectool -g -R /root/rpmbuild/SPECS/nginx.spec
