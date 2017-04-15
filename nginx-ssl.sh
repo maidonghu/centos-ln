@@ -1,3 +1,4 @@
+#!/bin/bash
 yum -y groupinstall 'Development Tools'
 yum -y install wget openssl-devel libxml2-devel libxslt-devel gd-devel perl-ExtUtils-Embed GeoIP-devel rpmdevtools
 
