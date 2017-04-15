@@ -17,7 +17,7 @@ sed -i "/Source12: .*/a Source100: https://raw.githubusercontent.com/maidonghu/c
 sed -i "s|--with-http_ssl_module|--with-http_ssl_module --with-openssl=$OPENSSL|g" /root/rpmbuild/SPECS/nginx.spec
 sed -i '/%setup -q/a tar zxf %{SOURCE100}' /root/rpmbuild/SPECS/nginx.spec
 sed -i '/.*Requires: openssl.*/d' /root/rpmbuild/SPECS/nginx.spec
-sed -i '/BuildRequires: pcre-devel/a BuildRequires: jemalloc-devel' 
+sed -i '/BuildRequires: pcre-devel/a BuildRequires: jemalloc-devel' /root/rpmbuild/SPECS/nginx.spec
 # hardening whatnots since 1.11.9
 sed -i 's|%define WITH_LD_OPT .*|%define WITH_LD_OPT ""|g' /root/rpmbuild/SPECS/nginx.spec
 sed -i 's| -fPIC||g' /root/rpmbuild/SPECS/nginx.spec
