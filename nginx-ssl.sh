@@ -1,6 +1,6 @@
 #!/bin/bash
 yum -y groupinstall 'Development Tools'
-yum -y install wget openssl-devel libxml2-devel libxslt-devel gd-devel perl-ExtUtils-Embed GeoIP-devel rpmdevtools
+yum -y install wget openssl-devel libxml2-devel libxslt-devel jemalloc-devel gd-devel perl-ExtUtils-Embed GeoIP-devel rpmdevtools
 
 OPENSSL="openssl-1.0.2k"
 NGINX_VERSION="1.12.0-1"
