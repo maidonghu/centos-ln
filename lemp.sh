@@ -63,8 +63,7 @@ sudo cp -rp wordpress/* html/
 sudo chmod 777 html html/wp-content
 
 sudo tuned-adm profile throughput-performance
-sudo wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/maidonghu/centos-ln/master/nginx.conf
-sudo wget -O /etc/nginx/conf.d/http.conf https://raw.githubusercontent.com/maidonghu/centos-ln/master/http.conf
+
 
 cd /var/www/html/wp-content/plugins/
 sudo wget https://downloads.wordpress.org/plugin/updraftplus.1.12.40.zip
@@ -80,4 +79,6 @@ sudo mv /blog.mikecloud.info.key /etc/nginx/ssl/blog.mikecloud.info_ecc/
 sudo mv /www.conf /etc/php-fpm.d/
 sudo systemctl restart php-fpm
 sudo chown -R apache:apache /var/www/html/wp-content
+sudo wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/maidonghu/centos-ln/master/nginx.conf
+sudo wget -O /etc/nginx/conf.d/http.conf https://raw.githubusercontent.com/maidonghu/centos-ln/master/http.conf
 sudo systemctl restart nginx
