@@ -35,8 +35,6 @@ sudo systemctl restart redis
 #sudo rpm -ivh remi-release-7.rpm
 sudo yum --enablerepo=remi,remi-php71 install php php-mysqlnd php-gd php-xml php-redis php-xmlrpc php-mbstring php-mcrypt php-fpm php-opcache php-apcu -y
 sudo systemctl enable php-fpm
-sudo mv /www.conf /etc/php-fpm.d/
-sudo systemctl restart php-fpm
 
 #sudo touch /etc/yum.repos.d/nginx.repo
 #echo '[nginx]
@@ -79,5 +77,7 @@ sudo mkdir  -p /etc/nginx/ssl/blog.mikecloud.info_ecc
 sudo mv /fullchain.cer /etc/nginx/ssl/blog.mikecloud.info_ecc/
 sudo mv /blog.mikecloud.info.key /etc/nginx/ssl/blog.mikecloud.info_ecc/
 
+sudo mv /www.conf /etc/php-fpm.d/
+sudo systemctl restart php-fpm
 sudo chown -R apache:apache /var/www/html/wp-content
 sudo systemctl restart nginx
