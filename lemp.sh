@@ -54,7 +54,6 @@ sudo rpm -ivh https://raw.githubusercontent.com/maidonghu/centos-ln/master/nginx
 sudo systemctl disable httpd
 sudo systemctl stop httpd
 sudo systemctl enable nginx
-sudo systemctl start nginx
 
 cd /var/www/
 sudo wget https://wordpress.org/latest.zip
@@ -63,7 +62,6 @@ sudo cp -rp wordpress/* html/
 sudo chmod 777 html html/wp-content
 
 sudo tuned-adm profile throughput-performance
-
 
 cd /var/www/html/wp-content/plugins/
 sudo wget https://downloads.wordpress.org/plugin/updraftplus.1.12.40.zip
