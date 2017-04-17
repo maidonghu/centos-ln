@@ -1,4 +1,6 @@
 #!/bin/bash
+sudo setenforce 0
+
 sudo mkfs.ext4 -F /dev/disk/by-id/scsi-0DO_Volume_volume-nyc1-01
 sudo mkdir -p /mnt/volume-nyc1-01
 sudo mount -o discard,defaults /dev/disk/by-id/scsi-0DO_Volume_volume-nyc1-01 /mnt/volume-nyc1-01
