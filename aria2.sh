@@ -30,6 +30,9 @@ sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/you
 sudo chmod a+rx /usr/local/bin/youtube-dl
 sudo yum install python -y
 
+sudo wget https://raw.githubusercontent.com/maidonghu/myconf/master/gdrive -O /usr/local/bin/gdrive
+sudo chmod a+rx /usr/local/bin/gdrive
+
 echo "Please provied gdrive cert file"
 sleep 30
 mkdir .gdrive
