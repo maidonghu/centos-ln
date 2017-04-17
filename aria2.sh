@@ -25,3 +25,12 @@ sudo aria2c --conf-path=/usr/local/etc/aria2.conf
 
 sudo firewall-cmd --zone=public --add-port=6800/tcp --permanent
 sudo firewall-cmd --reload
+
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+sudo apt install python -y
+
+echo "Please provied gdrive cert file"
+sleep 30
+mkdir .gdrive
+mv token_v2.json ./.gdrive/token_v2.json
