@@ -23,3 +23,5 @@ wget https://raw.githubusercontent.com/maidonghu/ubuntu16.04-DO/master/aria2.con
 sudo mv aria2.conf /usr/local/etc/aria2.conf
 sudo aria2c --conf-path=/usr/local/etc/aria2.conf
 
+sudo firewall-cmd --zone=public --add-port=6800/tcp --permanent
+sudo firewall-cmd --reload
