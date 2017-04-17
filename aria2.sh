@@ -11,3 +11,15 @@ sudo yum localinstall --nogpgcheck -y https://download1.rpmfusion.org/free/el/rp
 sudo yum install -y ffmpeg jemalloc
 sudo yum install -y c-ares
 sudo rpm -ivh https://raw.githubusercontent.com/maidonghu/centos-ln/master/aria2-1.31.0-2.el7.centos.x86_64.rpm
+
+cd /mnt/volume-nyc1-01
+sudo mkdir -p Downloads
+cd Downloads
+sudo touch aria2.log
+sudo touch aria2.session
+cd ~
+
+wget https://raw.githubusercontent.com/maidonghu/ubuntu16.04-DO/master/aria2.conf
+sudo mv aria2.conf /usr/local/etc/aria2.conf
+sudo aria2c --conf-path=/usr/local/etc/aria2.conf
+
