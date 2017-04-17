@@ -28,7 +28,7 @@ sudo firewall-cmd --reload
 
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
-sudo apt install python -y
+sudo yum install python -y
 
 echo "Please provied gdrive cert file"
 sleep 30
