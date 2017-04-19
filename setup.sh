@@ -35,6 +35,7 @@ yum install sendmail -y
 systemctl enable sendmail
 systemctl start sendmail
 
+yum install -y firewalld
 systemctl enable firewalld
 systemctl start firewalld
 firewall-cmd --zone=public --add-port=50009/tcp --permanent
