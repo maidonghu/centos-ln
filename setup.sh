@@ -16,6 +16,7 @@ cat /authorized_keys >> /home/mike/.ssh/authorized_keys
 fi
 
 chown mike:mike /home/mike -R
+echo 'mike ALL=(ALL) NOPASSWD: ALL' | tee -a /etc/sudoers
 
 yum update -y
 timedatectl set-timezone America/Vancouver
