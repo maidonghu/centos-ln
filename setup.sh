@@ -51,4 +51,4 @@ chmod +x /etc/rc.d/rc.local
 
 echo 'Please logoff and login again with SSH with mike!' 
 sleep 5
-reboot
+poweroff
