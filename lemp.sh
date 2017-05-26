@@ -2,11 +2,11 @@
 sudo setenforce 0
 
 sudo touch /etc/yum.repos.d/MariaDB.repo
-echo '# MariaDB 10.1 CentOS repository list - created 2017-04-02 05:25 UTC
+echo '# MariaDB 10.2 CentOS repository list - created 2017-04-02 05:25 UTC
 # http://downloads.mariadb.org/mariadb/repositories/
 [mariadb]
 name = MariaDB
-baseurl = http://yum.mariadb.org/10.1/centos7-amd64
+baseurl = http://yum.mariadb.org/10.2/centos7-amd64
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1' | sudo tee /etc/yum.repos.d/MariaDB.repo
 
