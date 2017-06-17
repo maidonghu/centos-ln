@@ -7,9 +7,13 @@ sudo mount -o discard,defaults /dev/disk/by-id/scsi-0DO_Volume_volume-nyc1-01 /m
 echo /dev/disk/by-id/scsi-0DO_Volume_volume-nyc1-01 /mnt/volume-nyc1-01 ext4 defaults,nofail,discard 0 0 | sudo tee -a /etc/fstab
 
 sudo yum install epel-release -y
-sudo yum localinstall --nogpgcheck -y https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-7.noarch.rpm
-sudo yum install -y ffmpeg jemalloc
-sudo yum install -y c-ares
+sudo yum install -y c-ares  jemalloc
+wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz
+tar xfv ffmpeg-release-64bit-static.tar.xz
+sudo mkdir -p /usr/local/bin/ffmpeg
+cd ffmpeg-3*
+sudo mv * /usr/local/bin/ffmpeg/
+sudo ln -s /usr/local/bin/ffmpeg/ffmpeg /usr/bin/ffmpeg
 sudo rpm -ivh https://raw.githubusercontent.com/maidonghu/centos-ln/master/aria2-1.32.0-1.el7.centos.x86_64.rpm
 
 cd /mnt/volume-nyc1-01
