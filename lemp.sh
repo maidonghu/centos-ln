@@ -29,7 +29,8 @@ sudo chmod 777 -R /var/run/redis
 sudo mv /redis.conf /etc/
 echo 'vm.overcommit_memory = 1' | sudo tee -a /etc/sysctl.conf
 sudo sysctl vm.overcommit_memory=1
-
+sudo systemctl start redis
+sudo systemctl restart redis
 
 #wget http://mirrors.mediatemple.net/remi/enterprise/remi-release-7.rpm
 #sudo rpm -ivh remi-release-7.rpm
@@ -76,7 +77,6 @@ sudo mv /blog.mikecloud.info.key /etc/nginx/ssl/blog.mikecloud.info_ecc/
 
 sudo mv /www.conf /etc/php-fpm.d/
 sudo systemctl restart php-fpm
-sudo systemctl restart redis
 sudo chown -R apache:apache /var/www/html/wp-content
 sudo wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/maidonghu/centos-ln/master/nginx.conf
 sudo wget -O /etc/nginx/conf.d/http.conf https://raw.githubusercontent.com/maidonghu/centos-ln/master/http.conf
