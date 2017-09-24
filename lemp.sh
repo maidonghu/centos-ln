@@ -64,8 +64,8 @@ sudo chmod 777 html html/wp-content
 sudo tuned-adm profile throughput-performance
 
 cd /var/www/html/wp-content/plugins/
-sudo wget https://downloads.wordpress.org/plugin/updraftplus.1.13.1.zip
-sudo unzip updraftplus.1.13.1.zip
+sudo wget https://downloads.wordpress.org/plugin/updraftplus.1.13.8.zip
+sudo unzip updraftplus.1.13.8.zip
 sudo mv /wp-config.php /var/www/html/
 sudo mkdir -p /etc/nginx/ssl/blog.mikecloud.info
 sudo mv /fullchain1.pem /etc/nginx/ssl/blog.mikecloud.info/
