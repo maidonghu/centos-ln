@@ -36,6 +36,8 @@ yum install sendmail -y
 systemctl enable sendmail
 systemctl start sendmail
 
+sudo yum install epel-release -y
+
 yum install -y firewalld
 systemctl enable firewalld
 systemctl start firewalld
