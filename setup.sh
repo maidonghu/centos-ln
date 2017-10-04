@@ -36,10 +36,10 @@ yum install sendmail -y
 systemctl enable sendmail
 systemctl start sendmail
 
-sudo yum install epel-release -y
+yum install epel-release -y
 wget wget https://raw.githubusercontent.com/maidonghu/centos-ln/master/shadowsocks-libev-3.1.0-1.4.git10a2d3e.el7.centos.x86_64.rpm
-sudo yum install mbedtls libsodium libev c-ares -y
-sudo rpm -ivh shadowsocks-libev-3.1.0-1.4.git10a2d3e.el7.centos.x86_64.rpm
+yum install mbedtls libsodium libev c-ares -y
+rpm -ivh shadowsocks-libev-3.1.0-1.4.git10a2d3e.el7.centos.x86_64.rpm
 
 yum install -y firewalld
 systemctl enable firewalld
@@ -47,6 +47,7 @@ systemctl start firewalld
 firewall-cmd --zone=public --add-port=50009/tcp --permanent
 firewall-cmd --zone=public --add-service=http --permanent
 firewall-cmd --zone=public --add-service=https --permanent
+firewall-cmd --zone=public --add-port=53214/tcp --permanent
 firewall-cmd --reload
 
 echo never > /sys/kernel/mm/transparent_hugepage/enabled
