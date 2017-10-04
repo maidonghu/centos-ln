@@ -40,6 +40,8 @@ yum install epel-release -y
 wget wget https://raw.githubusercontent.com/maidonghu/centos-ln/master/shadowsocks-libev-3.1.0-1.4.git10a2d3e.el7.centos.x86_64.rpm
 yum install mbedtls libsodium libev c-ares -y
 rpm -ivh shadowsocks-libev-3.1.0-1.4.git10a2d3e.el7.centos.x86_64.rpm
+yum install rng-tools
+rngd -r /dev/urandom
 
 yum install -y firewalld
 systemctl enable firewalld
