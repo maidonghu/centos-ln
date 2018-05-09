@@ -14,7 +14,8 @@ sudo mkdir -p /usr/local/bin/ffmpeg
 cd ffmpeg-3*
 sudo mv * /usr/local/bin/ffmpeg/
 sudo ln -s /usr/local/bin/ffmpeg/ffmpeg /usr/bin/ffmpeg
-sudo rpm -ivh https://raw.githubusercontent.com/maidonghu/centos-ln/master/aria2-1.32.0-1.el7.centos.x86_64.rpm
+#sudo rpm -ivh https://raw.githubusercontent.com/maidonghu/centos-ln/master/aria2-1.32.0-1.el7.centos.x86_64.rpm
+sudo rpm -ivh https://raw.githubusercontent.com/maidonghu/centos-ln/master/aria2-1.33.1-2.el7.centos.x86_64.rpm
 
 cd /mnt/volume-nyc1-01
 sudo mkdir -p Downloads
