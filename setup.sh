@@ -45,14 +45,14 @@ systemctl start sendmail
 #yum install rng-tools
 #rngd -r /dev/urandom
 
-yum install -y firewalld
-systemctl enable firewalld
-systemctl start firewalld
-firewall-cmd --zone=public --add-port=50009/tcp --permanent
-firewall-cmd --zone=public --add-service=http --permanent
-firewall-cmd --zone=public --add-service=https --permanent
-firewall-cmd --zone=public --add-port=53214/tcp --permanent
-firewall-cmd --reload
+#yum install -y firewalld
+#systemctl enable firewalld
+#systemctl start firewalld
+#firewall-cmd --zone=public --add-port=50009/tcp --permanent
+#firewall-cmd --zone=public --add-service=http --permanent
+#firewall-cmd --zone=public --add-service=https --permanent
+#firewall-cmd --zone=public --add-port=53214/tcp --permanent
+#firewall-cmd --reload
 
 echo never > /sys/kernel/mm/transparent_hugepage/enabled
 echo 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' | tee -a /etc/rc.local
