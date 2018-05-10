@@ -19,7 +19,7 @@ chown mike:mike /home/mike -R
 echo 'mike ALL=(ALL) NOPASSWD: ALL' | tee -a /etc/sudoers
 
 curl -O https://raw.githubusercontent.com/maidonghu/centos-ln/master/wget-1.19.5-1.el7.centos.x86_64.rpm
-yum localinstall wget-1.19.5-1.el7.centos.x86_64.rpm
+yum localinstall wget-1.19.5-1.el7.centos.x86_64.rpm -y
 
 yum update -y
 timedatectl set-timezone America/Vancouver
