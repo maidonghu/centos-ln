@@ -8,7 +8,6 @@ unset pswd
 gpasswd -a mike wheel
 
 mkdir /home/mike/.ssh
-yum install wget unzip -y
 if [ -e ./.ssh/authorized_keys ]; then
 cat ./.ssh/authorized_keys >> /home/mike/.ssh/authorized_keys
 else 
