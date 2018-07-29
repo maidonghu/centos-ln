@@ -5568,6 +5568,6 @@ function FindProxyForURL(url, host) {
   if (isInside(host)) {
     return 'DIRECT';
   } else {
-    return 'SOCKS5 localhost:1080';
+    return 'SOCKS5 192.168.1.103:52989';
   }
 }
